@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+    <h1 class="heading">Typing Speed Test</h1>
+
+            
+        <div id="showSentance"></div>
+        <textarea id="text"name="_input"  cols="60" rows="10" disabled></textarea>
+        <br>
+        <button id="btn" type="submit">Start</button>
+
+        <p id="result">Result : </p>
+        <br>
+        <p id="wrong"></p>
+    </div>
+
+
+
+   
+                
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+1: Create an HTML file with the necessary elements, such as a textarea for the user to type in, a button to start the test, a div to show the randomly generated sentence, and another div to show the typing speed.
+
+
+
+2: In the JavaScript code, select the necessary elements using their respective IDs and create variables to store the start time, end time, and total time taken.
+
+
+
+
+3: Attach a click event listener to the button. When the user clicks the button, check if the text is "Start" or "Done". If it is "Start", enable the textarea and call the startTyingTest function. If it is "Done", disable the textarea and call the endTypingTest function.
+
+
+
+4: Define a function startTyingTest to generate a random sentence from an array of sentences, show the sentence in the show_sentence div, get the start time, and change the button text to "Done".
+
+
+
+5: Define a function endTypingTest to run when the user clicks the "Done" button. In this function, get the end time, calculate the total time taken, call the calculateTypingSpeed function, clear the show_sentence div and the textarea.
+
+
+
+6: Define a function calculateTypingSpeed to calculate the typing speed. Get the value of the textarea, remove any leading or trailing white spaces, split the text into an array of words, and calculate the number of words. If the number of words is not 0, calculate the typing speed and display it in the score div. Otherwise, display 0 as the typing speed.
+
+
+
+7: Apply the CSS to style the website.
+
+ -->
