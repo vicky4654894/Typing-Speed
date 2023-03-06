@@ -90,18 +90,25 @@ let arrText = [
          {
             rpm = Math.floor((countOfWords/totalTime)*60);
             wrongWord = check(arr1,arr2);
-            if(wrongWord.length === 0)
+            console.log(wrongWord.length);
+            if(arr1.length === arr2.length)
             {
+               if(wrongWord.length === 30)
                document.getElementById("wrong").innerText = "You have written correct sentance";
+               else{
+                  document.getElementById("wrong").innerText =  wrongWord ;
+               }
+            }
+            else if(arr1.length > arr2.length)
+            {
+             document.getElementById("wrong").innerText =  "You have written more than given sentance";
             }
             else{
-               document.getElementById("wrong").innerText =  wrongWord ;
+               document.getElementById("wrong").innerText = "You have written incomplete sentance";
             }
             ans = "You typing speed is "+rpm+" words per minutes & your wrote "+countOfWords+ " words & time taken "+totalTime+" seconds";
          }
-         
          result.innerHTML = ans;
-
     }
     //This function check wheather the user entered correct sentance;
     function check(arr1,arr2){
